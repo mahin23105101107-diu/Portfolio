@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usama Noor Mahin | Aspiring Network Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Usama Noor Mahin, Computer Science & Engineering student at Daffodil International University trained in CCNA and MTCNA."
+    />
+    <meta property="og:title" content="Usama Noor Mahin | Aspiring Network Engineer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Usama Noor Mahin, Computer Science & Engineering student at Daffodil International University trained in CCNA and MTCNA."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        document.documentElement.classList.add('js');
+        try {
+          var stored = localStorage.getItem('mahin-theme');
+          var prefersDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <button type="button" class="brand-btn" data-nav-page="overview" data-nav-section="home">
+          Usama Noor Mahin
+        </button>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <button type="button" class="nav-link is-active" data-nav-page="overview" data-nav-section="home">
+            Home
+          </button>
+          <button type="button" class="nav-link" data-nav-page="overview" data-nav-section="about">
+            About
+          </button>
+          <button type="button" class="nav-link" data-nav-page="overview" data-nav-section="skills">
+            Skills
+          </button>
+          <button type="button" class="nav-link" data-nav-page="overview" data-nav-section="training">
+            Training
+          </button>
+          <button type="button" class="nav-link" data-nav-page="tools" data-nav-section="project">
+            Project &amp; Subnet Tool
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="btn-primary-sm" data-nav-contact>
+            Contact
+          </button>
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+            aria-label="Open navigation menu"
+          >
+            <svg id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+            <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-nav-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+        <button type="button" class="mobile-nav-link is-active" data-nav-page="overview" data-nav-section="home">
+          Home
+        </button>
+        <button type="button" class="mobile-nav-link" data-nav-page="overview" data-nav-section="about">
+          About &amp; Education
+        </button>
+        <button type="button" class="mobile-nav-link" data-nav-page="overview" data-nav-section="skills">
+          Skills
+        </button>
+        <button type="button" class="mobile-nav-link" data-nav-page="overview" data-nav-section="training">
+          Training
+        </button>
+        <button type="button" class="mobile-nav-link" data-nav-page="tools" data-nav-section="project">
+          Project &amp; Subnet Tool
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PAGE 1: HOME, ABOUT, SKILLS, TRAINING -->
+      <div id="page-overview" class="page-view">
+        <section id="home" class="hero-section">
+          <div class="blob blob-amber" aria-hidden="true"></div>
+          <div class="blob blob-indigo" aria-hidden="true"></div>
+          <div class="blob blob-pink" aria-hidden="true"></div>
+          <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+          <div class="container hero-inner">
+            <div class="hero-toolbar">
+              <div class="segmented-group" role="group" aria-label="Hero backdrop motion">
+                <button type="button" class="seg-btn is-active" data-canvas-mode="waves" aria-pressed="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                  </svg>
+                  Waves
+                </button>
+                <button type="button" class="seg-btn" data-canvas-mode="network" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="16" y="16" width="6" height="6" rx="1" />
+                    <rect x="2" y="16" width="6" height="6" rx="1" />
+                    <rect x="9" y="2" width="6" height="6" rx="1" />
+                    <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+                    <path d="M12 12V8" />
+                  </svg>
+                  Mesh
+                </button>
+              </div>
+
+              <div class="segmented-group" role="group" aria-label="Color theme">
+                <button type="button" class="seg-btn" data-theme-set="light" aria-pressed="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                  </svg>
+                  Light
+                </button>
+                <button type="button" class="seg-btn" data-theme-set="dark" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                  </svg>
+                  Dark
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div class="hero-copy reveal">
+                <h1>Hi, I’m Usama Noor Mahin</h1>
+                <p class="hero-role">Aspiring Network Engineer</p>
+                <p class="hero-lead">
+                  Computer Science &amp; Engineering student at Daffodil International University in Dhaka, trained in CCNA and MTCNA. I learn best by building labs, configuring routers and switches, and troubleshooting real network topologies.
+                </p>
+                <div class="hero-cta">
+                  <a href="#contact" class="btn-gradient">
+                    Get in touch
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                  <button type="button" class="btn-outline" data-nav-page="tools" data-nav-section="project">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+                      <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+                      <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+                    </svg>
+                    Project &amp; Subnet Tool
+                  </button>
+                </div>
+              </div>
+
+              <div class="hero-portrait-col reveal">
+                <div class="portrait-frame">
+                  <figure class="portrait-card">
+                    <img
+                      id="portrait-img"
+                      src="data:image/jpeg;base64,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"
+                      alt="Portrait of Usama Noor Mahin, Computer Science and Engineering student at Daffodil International University"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div id="portrait-fallback" class="portrait-fallback" hidden>
+                      <strong>Usama Noor Mahin</strong>
+                      <span>Daffodil International University</span>
+                    </div>
+                    <figcaption>
+                      <strong>Usama Noor Mahin</strong>
+                      <span>B.Sc. in Computer Science &amp; Engineering · Daffodil International University</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <dl class="credential-strip reveal">
+              <div>
+                <dt class="accent-indigo">University</dt>
+                <dd>Daffodil International University</dd>
+              </div>
+              <div>
+                <dt class="accent-pink">Degree</dt>
+                <dd>B.Sc. in CSE · 2023–2026</dd>
+              </div>
+              <div>
+                <dt class="accent-teal">Training</dt>
+                <dd>CCNA &amp; MTCNA Courses</dd>
+              </div>
+              <div>
+                <dt class="accent-amber">Location</dt>
+                <dd>Mirpur-14, Dhaka</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ABOUT & EDUCATION -->
+        <section id="about" class="section surface-alt">
+          <div class="container about-grid">
+            <div class="reveal">
+              <div class="accent-bar bar-sky"></div>
+              <h2>About me</h2>
+              <div class="prose">
+                <p>
+                  I am pursuing a B.Sc. in Computer Science and Engineering at Daffodil International University, where computer networking quickly became the discipline I enjoy most. Through structured training in CCNA and MTCNA at Creative IT Institute, I built a strong foundation in IPv4 subnetting, routing, switching, VLAN segmentation, and router administration.
+                </p>
+                <p>
+                  I prefer hands-on lab work over passive slides—most of my understanding comes from designing multi-department topologies, breaking configurations intentionally, and diagnosing them step by step. I am now seeking an entry-level Network Engineer role or internship where I can work on production infrastructure and continue growing.
+                </p>
+              </div>
+
+              <dl class="about-meta">
+                <div>
+                  <dt>Languages</dt>
+                  <dd>Bangla, English</dd>
+                </div>
+                <div>
+                  <dt>Expected Graduation</dt>
+                  <dd class="accent-indigo tabular">2026</dd>
+                </div>
+                <div>
+                  <dt>Base</dt>
+                  <dd>Mirpur-14, Dhaka</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div id="education" class="reveal">
+              <div class="accent-bar bar-indigo"></div>
+              <h2>Education</h2>
+              <div class="edu-list">
+                <article class="edu-item">
+                  <div class="edu-top">
+                    <span class="tabular">2023 – 2026 (Expected)</span>
+                    <span class="mono tabular accent-indigo">Dhaka, Bangladesh</span>
+                  </div>
+                  <h3>B.Sc. in Computer Science &amp; Engineering</h3>
+                  <p>Daffodil International University</p>
+                </article>
+                <article class="edu-item">
+                  <div class="edu-top">
+                    <span class="tabular">2021</span>
+                    <span class="mono tabular accent-teal">GPA 5.00 / 5.00</span>
+                  </div>
+                  <h3>Higher Secondary Certificate (HSC)</h3>
+                  <p>Shaheed Police Smrity College</p>
+                </article>
+                <article class="edu-item">
+                  <div class="edu-top">
+                    <span class="tabular">2019</span>
+                    <span class="mono tabular accent-pink">GPA 5.00 / 5.00</span>
+                  </div>
+                  <h3>Secondary School Certificate (SSC)</h3>
+                  <p>Shaheed Police Smrity College</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+          <div class="container">
+            <div class="section-head reveal">
+              <div class="accent-bar bar-pink"></div>
+              <h2>Technical skills &amp; engineering workflow</h2>
+              <p>What I can configure on network hardware, the tools I document with, and how I approach troubleshooting.</p>
+            </div>
+
+            <div class="cards-3">
+              <article class="card reveal">
+                <div class="card-top-bar bar-teal"></div>
+                <span class="card-index mono">01.</span>
+                <h3>Networking &amp; Protocols</h3>
+                <p class="card-desc">Core routing, switching, and address planning competencies.</p>
+                <ul class="clean-list">
+                  <li>Computer Networking</li>
+                  <li>IP Addressing &amp; Subnetting</li>
+                  <li>Routing &amp; Switching</li>
+                  <li>VLAN &amp; Inter-VLAN Routing</li>
+                  <li>MikroTik RouterOS</li>
+                  <li>Network Configuration</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card-top-bar bar-sky"></div>
+                <span class="card-index mono">02.</span>
+                <h3>Tools &amp; Platforms</h3>
+                <p class="card-desc">Simulation, management, and technical documentation stack.</p>
+                <ul class="clean-list">
+                  <li>Cisco Packet Tracer</li>
+                  <li>MikroTik WinBox</li>
+                  <li>Git &amp; GitHub</li>
+                  <li>Microsoft Office</li>
+                  <li>Canva</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card-top-bar bar-amber"></div>
+                <span class="card-index mono">03.</span>
+                <h3>Engineering Habits</h3>
+                <p class="card-desc">How I collaborate and approach infrastructure faults.</p>
+                <ul class="clean-list">
+                  <li>Systematic Troubleshooting</li>
+                  <li>Teamwork</li>
+                  <li>Clear Communication</li>
+                  <li>Time Management</li>
+                  <li>Rapid Technical Learning</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- TRAINING -->
+        <section id="training" class="section surface-alt">
+          <div class="container">
+            <div class="training-head">
+              <div class="section-head reveal">
+                <div class="accent-bar bar-amber"></div>
+                <h2>Training &amp; lab practice</h2>
+                <p>CCNA and MTCNA training completed at Creative IT Institute with continuous Packet Tracer and WinBox lab work.</p>
+              </div>
+
+              <div class="filter-tabs" role="tablist" aria-label="Filter training records">
+                <button type="button" class="filter-btn is-active" role="tab" aria-selected="true" data-training-filter="all">
+                  All Training
+                </button>
+                <button type="button" class="filter-btn" role="tab" aria-selected="false" data-training-filter="ccna">
+                  CCNA · Cisco
+                </button>
+                <button type="button" class="filter-btn" role="tab" aria-selected="false" data-training-filter="mtcna">
+                  MTCNA · MikroTik
+                </button>
+                <button type="button" class="filter-btn" role="tab" aria-selected="false" data-training-filter="lab">
+                  Lab Practice
+                </button>
+              </div>
+            </div>
+
+            <div class="cards-3" id="training-grid">
+              <article class="card training-card" data-category="ccna">
+                <div class="card-top-bar bar-sky"></div>
+                <p class="card-meta">Creative IT Institute · Cisco Packet Tracer Labs</p>
+                <h3>CCNA — Cisco Networking</h3>
+                <p class="card-desc">Configured enterprise switching and routed topologies end to end in Cisco Packet Tracer.</p>
+                <ul class="dot-list">
+                  <li>IPv4 addressing, CIDR subnetting, static &amp; dynamic routing</li>
+                  <li>VLAN segmentation, VTP, STP, and EtherChannel link aggregation</li>
+                  <li>Access Control Lists (ACL), NAT/PAT, VPN, and PPPoE</li>
+                  <li>Device hardening via SSH/Telnet management and switch port security</li>
+                </ul>
+              </article>
+
+              <article class="card training-card" data-category="mtcna">
+                <div class="card-top-bar bar-pink"></div>
+                <p class="card-meta">Creative IT Institute · WinBox &amp; RouterOS Practice</p>
+                <h3>MTCNA — MikroTik RouterOS</h3>
+                <p class="card-desc">Managed MikroTik gateways, ISP-style client provisioning, and traffic shaping using WinBox.</p>
+                <ul class="dot-list">
+                  <li>DHCP server/client, IP pools, ARP/MAC binding, and bridging</li>
+                  <li>Static routing, wireless configuration, and PPPoE server setup</li>
+                  <li>Firewall filter rules, source/destination NAT, and tunnelling</li>
+                  <li>Simple queues and bandwidth control policies for client networks</li>
+                </ul>
+              </article>
+
+              <article class="card training-card" data-category="lab">
+                <div class="card-top-bar bar-teal"></div>
+                <p class="card-meta">Independent &amp; Academic Labs · Ongoing</p>
+                <h3>Hands-On Network Lab Practice</h3>
+                <p class="card-desc">Applied CCNA and MTCNA concepts across multi-subnet office designs and fault isolation drills.</p>
+                <ul class="dot-list">
+                  <li>Designing segmented department LANs with clean IP addressing plans</li>
+                  <li>Verifying end-to-end reachability using ping, traceroute, and ARP tables</li>
+                  <li>Documenting interface allocations, trunk links, and gateway policies</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PAGE 2: PROJECT & SUBNET TOOL -->
+      <div id="page-tools" class="page-view" hidden>
+        <section class="tools-banner">
+          <div class="blob blob-pink-sm" aria-hidden="true"></div>
+          <div class="blob blob-teal-sm" aria-hidden="true"></div>
+          <div class="container tools-banner-inner">
+            <div class="tools-top-row">
+              <button type="button" class="btn-back" data-nav-page="overview" data-nav-section="home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m12 19-7-7 7-7" />
+                  <path d="M19 12H5" />
+                </svg>
+                Back to Home
+              </button>
+
+              <div class="segmented-group" role="group" aria-label="Color theme">
+                <button type="button" class="seg-btn" data-theme-set="light" aria-pressed="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                  </svg>
+                  Light
+                </button>
+                <button type="button" class="seg-btn" data-theme-set="dark" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                  </svg>
+                  Dark
+                </button>
+              </div>
+            </div>
+
+            <div class="tools-header-row">
+              <div>
+                <h1>Network Architecture &amp; Subnet Lab</h1>
+                <p>Explore my Cisco Packet Tracer Enterprise LAN design and calculate IPv4 CIDR address blocks interactively.</p>
+              </div>
+              <div class="tools-jump-btns">
+                <button type="button" class="btn-outline-sm" data-scroll-target="project">
+                  Enterprise LAN Project
+                </button>
+                <button type="button" class="btn-outline-sm" data-scroll-target="calculator">
+                  Subnet Tool
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECT -->
+        <section id="project" class="section surface-alt">
+          <div class="container">
+            <div class="section-head">
+              <div class="accent-bar bar-teal"></div>
+              <p class="kicker-teal">Academic Project · Cisco Packet Tracer</p>
+              <h2>Enterprise LAN Network Design</h2>
+              <p>
+                Designed a segmented corporate LAN separating HR, IT, and Sales departments into dedicated VLANs and /26 subnets interconnected via Router-on-a-Stick routing and Layer 2 switching. Tap any device in the topology to inspect its addressing and interface role.
+              </p>
+            </div>
+
+            <div class="project-grid">
+              <div class="topology-canvas-card">
+                <div class="topology-header">
+                  <div>
+                    <h3>Interactive Logical Topology</h3>
+                    <p>802.1Q Trunk · Inter-VLAN Routing · 3 Isolated Subnets</p>
+                  </div>
+                  <div class="node-pills" role="group" aria-label="Select network device">
+                    <button type="button" class="node-btn is-active" data-node="router">R1</button>
+                    <button type="button" class="node-btn" data-node="switch">SW1</button>
+                    <button type="button" class="node-btn" data-node="hr">HR</button>
+                    <button type="button" class="node-btn" data-node="it">IT</button>
+                    <button type="button" class="node-btn" data-node="sales">SALES</button>
+                  </div>
+                </div>
+
+                <svg
+                  id="topology-svg"
+                  viewBox="0 0 480 300"
+                  role="img"
+                  aria-label="Interactive Enterprise LAN topology diagram connecting Core Router R1 to Distribution Switch SW1 and three department VLANs: HR VLAN 10, IT VLAN 20, and Sales VLAN 30"
+                >
+                  <g fill="none" stroke-linecap="round">
+                    <path id="link-r-sw" d="M240 66 L240 118" stroke="#F472B6" stroke-width="3" />
+                    <path id="link-sw-hr" d="M240 156 L84 218" stroke="#2DD4BF" stroke-width="2" />
+                    <path id="link-sw-it" d="M240 156 L240 218" stroke="#FBBF24" stroke-width="2" />
+                    <path id="link-sw-sales" d="M240 156 L396 218" stroke="#A78BFA" stroke-width="2" />
+                  </g>
+
+                  <text x="250" y="96" fill="#E2E8F0" font-size="10" font-family="JetBrains Mono, monospace">
+                    802.1Q Trunk
+                  </text>
+
+                  <g fill="#FFFFFF" stroke="#0F1538" stroke-width="1.5" aria-hidden="true">
+                    <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#link-r-sw" /></animateMotion></circle>
+                    <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s"><mpath href="#link-sw-hr" /></animateMotion></circle>
+                    <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s"><mpath href="#link-sw-it" /></animateMotion></circle>
+                    <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#link-sw-sales" /></animateMotion></circle>
+                  </g>
+
+                  <g class="svg-node" data-node="router" role="button" tabindex="0" aria-label="Inspect Core Router R1">
+                    <rect id="rect-router" x="170" y="16" width="140" height="50" rx="12" fill="#D92D84" stroke="#FBCFE8" stroke-width="2" />
+                    <text x="240" y="38" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Core Router (R1)</text>
+                    <text x="240" y="54" text-anchor="middle" fill="#FCE7F3" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.0/24</text>
+                  </g>
+
+                  <g class="svg-node" data-node="switch" role="button" tabindex="0" aria-label="Inspect Distribution Switch SW1">
+                    <rect id="rect-switch" x="160" y="118" width="160" height="42" rx="12" fill="#133A63" stroke="#1D8FEE" stroke-width="2" />
+                    <text x="240" y="138" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Switch (SW1)</text>
+                    <text x="240" y="152" text-anchor="middle" fill="#E0F2FE" font-size="10" font-family="JetBrains Mono, monospace">VLAN 10 · 20 · 30</text>
+                  </g>
+
+                  <g class="svg-node" data-node="hr" role="button" tabindex="0" aria-label="Inspect HR Department VLAN 10">
+                    <rect id="rect-hr" x="18" y="218" width="132" height="62" rx="12" fill="#0E3F3D" stroke="#0A9D90" stroke-width="2" />
+                    <text x="84" y="240" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">HR Dept</text>
+                    <text x="84" y="256" text-anchor="middle" fill="#CCFBF1" font-size="10" font-family="JetBrains Mono, monospace">VLAN 10</text>
+                    <text x="84" y="270" text-anchor="middle" fill="#99F6E4" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.0/26</text>
+                  </g>
+
+                  <g class="svg-node" data-node="it" role="button" tabindex="0" aria-label="Inspect IT Department VLAN 20">
+                    <rect id="rect-it" x="174" y="218" width="132" height="62" rx="12" fill="#4A2B09" stroke="#E69500" stroke-width="2" />
+                    <text x="240" y="240" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">IT Dept</text>
+                    <text x="240" y="256" text-anchor="middle" fill="#FEF3C7" font-size="10" font-family="JetBrains Mono, monospace">VLAN 20</text>
+                    <text x="240" y="270" text-anchor="middle" fill="#FDE68A" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.64/26</text>
+                  </g>
+
+                  <g class="svg-node" data-node="sales" role="button" tabindex="0" aria-label="Inspect Sales Department VLAN 30">
+                    <rect id="rect-sales" x="330" y="218" width="132" height="62" rx="12" fill="#2E1E59" stroke="#7C4DDB" stroke-width="2" />
+                    <text x="396" y="240" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Sales Dept</text>
+                    <text x="396" y="256" text-anchor="middle" fill="#EDE9FE" font-size="10" font-family="JetBrains Mono, monospace">VLAN 30</text>
+                    <text x="396" y="270" text-anchor="middle" fill="#DDD6FE" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.128/26</text>
+                  </g>
+                </svg>
+
+                <p class="topology-tech">
+                  Technologies: Cisco Packet Tracer · VLAN · Subnetting · Inter-VLAN Routing · Switching
+                </p>
+              </div>
+
+              <div class="inspector-card">
+                <div>
+                  <p id="node-sublabel" class="inspector-kicker">Selected Node · Router-on-a-Stick</p>
+                  <h3 id="node-label">Core Router (R1)</h3>
+                  <p id="node-notes" class="inspector-notes">
+                    Routes traffic across HR, IT, and Sales subnets using 802.1Q sub-interfaces while enforcing ACL isolation policies.
+                  </p>
+
+                  <dl class="inspector-dl">
+                    <div>
+                      <dt>Role</dt>
+                      <dd id="node-role">Inter-VLAN Routing &amp; NAT Gateway</dd>
+                    </div>
+                    <div>
+                      <dt>Subnet</dt>
+                      <dd id="node-subnet" class="mono tabular accent-indigo">192.168.10.0/24 (Summarized LAN)</dd>
+                    </div>
+                    <div>
+                      <dt>Gateway</dt>
+                      <dd id="node-gateway" class="mono tabular">Gi0/0.10 · .20 · .30 Sub-interfaces</dd>
+                    </div>
+                    <div>
+                      <dt>VLAN Scope</dt>
+                      <dd id="node-vlan" class="mono tabular accent-teal">802.1Q Trunk Encapsulation</dd>
+                    </div>
+                    <div>
+                      <dt>Interfaces</dt>
+                      <dd id="node-interfaces" class="mono tabular">Gi0/0 → SW1 Trunk · Gi0/1 → WAN Uplink</dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <div class="inspector-footer">
+                  <span>Verify these subnets directly in the calculator below</span>
+                  <button type="button" class="link-pink" data-scroll-target="calculator">
+                    Open Subnet Tool
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SUBNET TOOL -->
+        <section id="calculator" class="section">
+          <div class="container calc-grid">
+            <div>
+              <div class="accent-bar bar-pink"></div>
+              <h2>IPv4 Subnet Calculator</h2>
+              <p class="calc-lead">
+                Subnetting is one of my favourite parts of CCNA and MTCNA practice, so I built a quick CIDR calculator. Enter any IPv4 address with a prefix length or test one of the preset lab subnets.
+              </p>
+
+              <div class="presets-wrap">
+                <p class="presets-label">Quick lab presets</p>
+                <div class="presets-grid">
+                  <button type="button" class="preset-btn is-active" data-cidr="192.168.10.37/26">
+                    <strong>HR VLAN 10</strong>
+                    <span class="mono tabular">192.168.10.37/26</span>
+                  </button>
+                  <button type="button" class="preset-btn" data-cidr="10.10.20.14/28">
+                    <strong>IT VLAN 20</strong>
+                    <span class="mono tabular">10.10.20.14/28</span>
+                  </button>
+                  <button type="button" class="preset-btn" data-cidr="172.16.0.1/30">
+                    <strong>WAN Link</strong>
+                    <span class="mono tabular">172.16.0.1/30</span>
+                  </button>
+                  <button type="button" class="preset-btn" data-cidr="192.168.1.45/24">
+                    <strong>Office LAN</strong>
+                    <span class="mono tabular">192.168.1.45/24</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-card">
+              <div class="card-top-bar bar-rainbow"></div>
+              <form id="subnet-form" novalidate>
+                <label for="cidr-input">IPv4 Address / CIDR Prefix</label>
+                <div class="calc-input-row">
+                  <input
+                    id="cidr-input"
+                    type="text"
+                    inputmode="text"
+                    value="192.168.10.37/26"
+                    placeholder="192.168.10.37/26"
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button type="submit" class="btn-gradient">Calculate</button>
+                </div>
+              </form>
+
+              <p id="subnet-error" class="calc-error" role="alert" hidden></p>
+
+              <div id="subnet-output">
+                <div class="calc-meta-row">
+                  <span id="subnet-scope">Private (RFC 1918 · Class C)</span>
+                  <button type="button" id="copy-subnet-btn" class="copy-btn">
+                    <span id="copy-subnet-label">Copy summary</span>
+                  </button>
+                </div>
+
+                <dl class="calc-results" id="subnet-dl"></dl>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CONTACT BANNER -->
+      <section id="contact" class="section surface-alt">
+        <div class="container">
+          <div class="contact-banner reveal">
+            <div class="contact-copy">
+              <p class="contact-kicker">Available for Entry-Level Network Engineering &amp; Internships</p>
+              <h2>Let’s talk networks</h2>
+              <p>
+                I am ready to contribute to network operations, support, and infrastructure teams in Dhaka or remotely. Send me a message and I’ll reply as soon as I can.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <div class="contact-email-row">
+                <a class="contact-email-btn" href="mailto:mahindx727@gmail.com">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <span>mahindx727@gmail.com</span>
+                </a>
+                <button type="button" id="copy-email-btn" class="contact-copy-btn" aria-label="Copy email address">
+                  <span id="copy-email-label">Copy</span>
+                </button>
+              </div>
+              <a class="contact-phone-btn mono tabular" href="tel:+8801971836715">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>+880 1971 836715</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="footer-year">2026</span> Usama Noor Mahin · Daffodil International University · Mirpur-14, Dhaka</p>
+        <button type="button" id="back-to-top" class="footer-top-btn">Back to top</button>
+      </div>
+    </footer>
+  </body>
+</html>
